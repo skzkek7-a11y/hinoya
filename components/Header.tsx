@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
         {/* Logo Section - Optimized for horizontal logo */}
         <a href="#hero" className="relative z-50 flex items-center transition-transform hover:scale-105 active:scale-95">
           <img 
-            src="logo.png" 
+            src="https://static.wixstatic.com/media/0866ad_8df994eb9433440c829d4158566a7f2f~mv2.png/v1/fill/w_492,h_117,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Photoroom-20250307_125337.png" 
             alt="히노야카레" 
             className={`${scrolled ? 'h-10 md:h-12' : 'h-14 md:h-18'} w-auto transition-all duration-500 object-contain`}
             style={{ 

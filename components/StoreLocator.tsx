@@ -5,7 +5,7 @@ import { MapPin, Phone, Clock, Navigation } from 'lucide-react';
 const stores = [
   {
     name: '히노야카레 강남본점',
-    address: '서울특별시 강남구 테헤란로 123 1층',
+    address: '서울 강남구 강남대로94길 75(역삼동 637-36) 1층',
     phone: '02-1234-5678',
     hours: '11:00 - 21:00 (L.O 20:30)',
     status: '영업 중'
@@ -16,13 +16,6 @@ const stores = [
     phone: '02-9876-5432',
     hours: '11:30 - 22:00 (L.O 21:30)',
     status: '영업 중'
-  },
-  {
-    name: '히노야카레 판교점',
-    address: '경기도 성남시 분당구 판교역로 10 2층',
-    phone: '031-456-7890',
-    hours: '10:30 - 20:30 (L.O 20:00)',
-    status: '영업 마감'
   }
 ];
 
