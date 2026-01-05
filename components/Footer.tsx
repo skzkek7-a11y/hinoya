@@ -8,11 +8,22 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start border-b border-white/5 pb-16 mb-10">
           <div className="mb-10 md:mb-0">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-[#006335] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">日</span>
+            <div className="mb-6">
+              <img 
+                src="./logo.png" 
+                alt="히노야카레 로고" 
+                className="h-14 w-auto grayscale brightness-200 transition-all hover:grayscale-0 hover:brightness-100"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement?.querySelector('.fallback-footer-logo')?.classList.remove('hidden');
+                }}
+              />
+              <div className="fallback-footer-logo hidden flex items-center space-x-2">
+                <div className="w-8 h-8 bg-[#006335] rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">日</span>
+                </div>
+                <span className="text-2xl font-bold text-white tracking-tight">HINOYA</span>
               </div>
-              <span className="text-2xl font-bold text-white tracking-tight">HINOYA</span>
             </div>
             <p className="max-w-xs text-sm leading-relaxed">
               도쿄 칸다 카레 그랑프리 우승의 맛,<br />

@@ -27,14 +27,27 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#hero" className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-[#006335] rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-xl">日</span>
+        {/* Official Image Logo */}
+        <a href="#hero" className="flex items-center transition-transform hover:scale-105">
+          <img 
+            src="./logo.png" 
+            alt="히노야카레 로고" 
+            className={`${scrolled ? 'h-10' : 'h-12'} w-auto transition-all duration-300 object-contain`}
+            onError={(e) => {
+              // Fallback if image fails to load
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.parentElement?.querySelector('.fallback-logo')?.classList.remove('hidden');
+            }}
+          />
+          {/* Fallback text logo if image is missing */}
+          <div className="fallback-logo hidden flex items-center space-x-2">
+            <div className="w-10 h-10 bg-[#006335] rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-xl">日</span>
+            </div>
+            <span className={`text-2xl font-bold tracking-tight ${scrolled ? 'text-[#006335]' : 'text-white'}`}>
+              HINOYA
+            </span>
           </div>
-          <span className={`text-2xl font-bold tracking-tight ${scrolled ? 'text-[#006335]' : 'text-white'}`}>
-            HINOYA
-          </span>
         </a>
 
         {/* Desktop Nav */}
