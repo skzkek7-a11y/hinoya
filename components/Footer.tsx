@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="mb-12 md:mb-0">
             <div className="mb-8">
               <img 
-                src="logo.png" 
+                src="https://static.wixstatic.com/media/0866ad_8df994eb9433440c829d4158566a7f2f~mv2.png/v1/fill/w_492,h_117,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Photoroom-20250307_125337.png" 
                 alt="히노야카레" 
                 className="h-14 md:h-16 w-auto opacity-100 transition-opacity object-contain"
                 style={{ 

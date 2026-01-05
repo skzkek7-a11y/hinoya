@@ -9,8 +9,8 @@ const BrandStory: React.FC = () => {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1466633364863-5672228fe597?auto=format&fit=crop&q=80&w=1200" 
-                alt="Brand Story" 
+                src="https://images.unsplash.com/photo-1582234372722-50d7ccc30eba?auto=format&fit=crop&q=80&w=1200" 
+                alt="Hinoya Kitchen Heritage" 
                 className="w-full h-[600px] object-cover"
               />
             </div>

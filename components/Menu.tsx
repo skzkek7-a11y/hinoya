@@ -14,35 +14,14 @@ const menuItems = [
     name: '등심 돈까스 카레',
     price: '12,500원',
     description: '바삭하게 튀겨낸 두툼한 한돈 등심 돈까스와 정통 카레의 완벽한 조화.',
-    image: 'https://images.unsplash.com/photo-1633341398934-080be8619379?auto=format&fit=crop&q=80&w=600'
+    image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 3,
     name: '치즈 돈까스 카레',
     price: '13,500원',
     description: '풍부한 모짜렐라 치즈가 가득 들어간 돈까스를 곁들인 프리미엄 메뉴.',
-    image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c173f0?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 4,
-    name: '소시지 카레',
-    price: '11,000원',
-    description: '육즙 가득한 그릴 소시지와 카레가 만나 아이부터 어른까지 좋아하는 메뉴.',
-    image: 'https://images.unsplash.com/photo-1544333346-64e4fe182747?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 5,
-    name: '가라아게 카레',
-    price: '12,000원',
-    description: '일본 정통 스타일의 닭튀김 가라아게를 얹어 고소하고 바삭한 풍미를 더했습니다.',
-    image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?auto=format&fit=crop&q=80&w=600'
-  },
-  {
-    id: 6,
-    name: '야채 고로케 카레',
-    price: '11,500원',
-    description: '부드러운 감자와 야채가 어우러진 고로케가 카레의 깊은 맛을 돋워줍니다.',
-    image: 'https://images.unsplash.com/photo-1614750939102-02439d75e517?auto=format&fit=crop&q=80&w=600'
+    image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&q=80&w=600'
   }
 ];
 
