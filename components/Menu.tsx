@@ -5,24 +5,18 @@ const menuItems = [
   {
     id: 1,
     name: '(명물)돈카츠 카레',
-    // Uncommenting price to resolve property access error on line 48
-    //price: '9,000원',
     description: '국내산 등심으로 만든 히노야카레의 시그니처 메뉴',
     image: 'https://i.postimg.cc/T3Ythr48/menu01.jpg'
   },
   {
     id: 2,
     name: '야끼치즈 카레',
-    // Uncommenting price to resolve property access error on line 48
-    //price: '12,500원',
     description: '풍부한 로짜렐라 치즈가 가득 들어간 프리미엄 메뉴',
     image: 'https://i.postimg.cc/4xNWnzSG/menu02.jpg'
   },
   {
     id: 3,
     name: '비엔나 카레',
-    // Uncommenting price to resolve property access error on line 48
-    //price: '13,500원',
     description: '고함량 국내산 돼지고기로 만들어 차원이 다른 쫀득함',
     image: 'https://i.postimg.cc/htP2h95q/menu03.jpg?auto=format&fit=crop&q=80&w=600'
   }
@@ -47,10 +41,6 @@ const Menu: React.FC = () => {
                   alt={item.name} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                {/* Fix: Property 'price' is now defined in the menuItems array objects */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg shadow-sm font-bold text-[#006335] text-sm">
-                  {item.price}
-                </div>
               </div>
               <div className="p-6 md:p-8">
                 <h4 className="text-lg md:text-xl font-bold mb-2 group-hover:text-[#006335] transition-colors">{item.name}</h4>
