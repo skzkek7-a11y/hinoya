@@ -64,15 +64,6 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-10 pt-8 border-t border-white/10 hidden md:block">
-              <p className="text-xs font-bold opacity-40 mb-4 uppercase tracking-widest">Social channels</p>
-              <div className="flex space-x-6 text-sm font-bold">
-                <a href="#" className="hover:text-white opacity-60 hover:opacity-100 transition-all">Instagram</a>
-                <a href="#" className="hover:text-white opacity-60 hover:opacity-100 transition-all">YouTube</a>
-              </div>
-            </div>
-          </div>
-
           {/* Right: Form Section */}
           <div className="w-full md:w-3/5 bg-white p-8 md:p-12 relative">
             {status === 'SUCCESS' ? (
