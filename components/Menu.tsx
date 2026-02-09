@@ -6,7 +6,7 @@ const menuItems = [
     id: 1,
     name: '(명물)돈카츠 카레',
     // Uncommenting price to resolve property access error on line 48
-    price: '9,000원',
+    //price: '9,000원',
     description: '국내산 등심으로 만든 히노야카레의 시그니처 메뉴',
     image: 'https://i.postimg.cc/T3Ythr48/menu01.jpg'
   },
@@ -14,7 +14,7 @@ const menuItems = [
     id: 2,
     name: '야끼치즈 카레',
     // Uncommenting price to resolve property access error on line 48
-    price: '12,500원',
+    //price: '12,500원',
     description: '풍부한 로짜렐라 치즈가 가득 들어간 프리미엄 메뉴',
     image: 'https://i.postimg.cc/4xNWnzSG/menu02.jpg'
   },
@@ -22,7 +22,7 @@ const menuItems = [
     id: 3,
     name: '비엔나 카레',
     // Uncommenting price to resolve property access error on line 48
-    price: '13,500원',
+    //price: '13,500원',
     description: '고함량 국내산 돼지고기로 만들어 차원이 다른 쫀득함',
     image: 'https://i.postimg.cc/htP2h95q/menu03.jpg?auto=format&fit=crop&q=80&w=600'
   }
