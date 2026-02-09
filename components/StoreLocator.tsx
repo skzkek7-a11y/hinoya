@@ -16,10 +16,10 @@ const stores: Store[] = [
     id: 1,
     name: '히노야카레 강남본점',
     address: '서울 강남구 강남대로94길 75',
-    phone: '02-555-1234',
+    phone: '02-566-3419',
     hours: '11:00 - 21:00',
     status: '영업 중'
-  },
+  }/*,
   {
     id: 2,
     name: '히노야카레 홍대점',
@@ -35,7 +35,7 @@ const stores: Store[] = [
     phone: '02-780-9988',
     hours: '11:00 - 20:30',
     status: '브레이크 타임'
-  }
+  }*/
 ];
 
 const StoreLocator: React.FC = () => {
