@@ -4,24 +4,24 @@ import React from 'react';
 const menuItems = [
   {
     id: 1,
-    name: '히노야 카레 (기본)',
-    price: '9,000원',
-    description: '히노야만의 비법 소스로 완성한 오리지널 카레. "첫 맛은 달콤, 끝 맛은 매콤"의 정수.',
-    image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&q=80&w=600'
+    name: '(명물)돈카츠 카레',
+    //price: '9,000원',
+    description: '국내산 등심으로 만든 히노야카레의 시그니처 메뉴',
+    image: 'https://i.postimg.cc/T3Ythr48/menu01.jpg'
   },
   {
     id: 2,
-    name: '등심 돈까스 카레',
-    price: '12,500원',
-    description: '바삭하게 튀겨낸 두툼한 한돈 등심 돈까스와 정통 카레의 완벽한 조화.',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=600'
+    name: '야끼치즈 카레',
+    //price: '12,500원',
+    description: '풍부한 로짜렐라 치즈가 가득 들어간 프리미엄 메뉴',
+    image: 'https://i.postimg.cc/4xNWnzSG/menu02.jpg'
   },
   {
     id: 3,
-    name: '치즈 돈까스 카레',
-    price: '13,500원',
-    description: '풍부한 모짜렐라 치즈가 가득 들어간 돈까스를 곁들인 프리미엄 메뉴.',
-    image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&q=80&w=600'
+    name: '비엔나 카레',
+    //price: '13,500원',
+    description: '고함량 국내산 돼지고기로 만들어 차원이 다른 쫀득함',
+    image: 'https://i.postimg.cc/htP2h95q/menu03.jpg?auto=format&fit=crop&q=80&w=600'
   }
 ];
 
