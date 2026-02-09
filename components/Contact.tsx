@@ -62,12 +62,6 @@ const Contact: React.FC = () => {
                 <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1 font-bold">Email</p>
                 <p className="font-medium text-sm">hinoyakorea@gmail.com</p>
               </div>
-              /*
-              <div className="group">
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1 font-bold">Call Center</p>
-                <p className="font-black text-2xl tracking-tighter">1588-XXXX</p>
-              </div>
-              */
             </div>
 
             <div className="mt-10 pt-8 border-t border-white/10 hidden md:block">
