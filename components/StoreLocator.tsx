@@ -19,23 +19,7 @@ const stores: Store[] = [
     phone: '02-566-3419',
     hours: '11:00 - 21:00',
     status: '영업 중'
-  }/*,
-  {
-    id: 2,
-    name: '히노야카레 홍대점',
-    address: '서울 마포구 어울마당로 94-7',
-    phone: '02-333-5678',
-    hours: '11:30 - 21:30',
-    status: '영업 중'
-  },
-  {
-    id: 3,
-    name: '히노야카레 여의도점',
-    address: '서울 영등포구 국제금융로2길 32',
-    phone: '02-780-9988',
-    hours: '11:00 - 20:30',
-    status: '브레이크 타임'
-  }*/
+  }
 ];
 
 const StoreLocator: React.FC = () => {
@@ -46,6 +30,7 @@ const StoreLocator: React.FC = () => {
     store.name.includes(searchTerm) || store.address.includes(searchTerm)
   );
 
+  // 구글 지도 임베드 URL 최적화
   const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(activeStore.address + " " + activeStore.name)}&output=embed`;
 
   return (
@@ -57,19 +42,21 @@ const StoreLocator: React.FC = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* Map Side - Reduced height on mobile */}
-          <div className="w-full lg:w-2/3 h-[350px] md:h-[600px] bg-gray-200 rounded-3xl overflow-hidden relative shadow-lg border-4 border-white">
+          {/* Map Side - Improved for Android/Mobile stability */}
+          <div className="w-full lg:w-2/3 h-[350px] md:h-[600px] bg-[#e5e3df] rounded-3xl overflow-hidden relative shadow-lg border-4 border-white">
             <iframe 
+              key={activeStore.id} // 매장 변경 시 iframe 완전 재렌더링 강제 (안드로이드 깨짐 방지 핵심)
               src={mapUrl} 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
-              allowFullScreen 
-              loading="lazy" 
+              allowFullScreen={true}
+              referrerPolicy="no-referrer-when-downgrade"
               title="Store Map"
+              className="relative z-0"
             ></iframe>
             
-            <div className="absolute top-4 left-4 right-4 md:right-auto">
+            <div className="absolute top-4 left-4 right-4 md:right-auto z-10">
               <div className="relative">
                 <input 
                   type="text" 
@@ -83,57 +70,63 @@ const StoreLocator: React.FC = () => {
             </div>
           </div>
 
-          {/* List Side - Compact items on mobile */}
+          {/* List Side */}
           <div className="w-full lg:w-1/3 flex flex-col gap-3 max-h-[450px] md:max-h-[600px] overflow-y-auto pr-1 custom-scrollbar">
-            {filteredStores.map((store) => (
-              <div 
-                key={store.id} 
-                onClick={() => setActiveStore(store)}
-                className={`p-5 md:p-6 rounded-2xl cursor-pointer transition-all border-2 ${
-                  activeStore.id === store.id 
-                    ? 'bg-[#006335] border-[#006335] shadow-lg' 
-                    : 'bg-white border-white hover:border-gray-100'
-                }`}
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <h4 className={`text-base font-bold transition-colors ${
-                    activeStore.id === store.id ? 'text-white' : 'text-gray-900'
-                  }`}>
-                    {store.name}
-                  </h4>
-                  <span className={`text-[9px] font-black px-2 py-0.5 rounded-full uppercase ${
-                    store.status === '영업 중' 
-                      ? (activeStore.id === store.id ? 'bg-white/20 text-white' : 'bg-green-100 text-green-700') 
-                      : 'bg-red-100 text-red-700'
-                  }`}>
-                    {store.status}
-                  </span>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className={`flex items-start text-[11px] leading-tight transition-colors ${
-                    activeStore.id === store.id ? 'text-white/80' : 'text-gray-600'
-                  }`}>
-                    <MapPin size={14} className={`mr-2 shrink-0 ${activeStore.id === store.id ? 'text-white' : 'text-[#006335]'}`} />
-                    <span>{store.address}</span>
+            {filteredStores.length > 0 ? (
+              filteredStores.map((store) => (
+                <div 
+                  key={store.id} 
+                  onClick={() => setActiveStore(store)}
+                  className={`p-5 md:p-6 rounded-2xl cursor-pointer transition-all border-2 ${
+                    activeStore.id === store.id 
+                      ? 'bg-[#006335] border-[#006335] shadow-lg' 
+                      : 'bg-white border-white hover:border-gray-100'
+                  }`}
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <h4 className={`text-base font-bold transition-colors ${
+                      activeStore.id === store.id ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      {store.name}
+                    </h4>
+                    <span className={`text-[9px] font-black px-2 py-0.5 rounded-full uppercase ${
+                      store.status === '영업 중' 
+                        ? (activeStore.id === store.id ? 'bg-white/20 text-white' : 'bg-green-100 text-green-700') 
+                        : 'bg-red-100 text-red-700'
+                    }`}>
+                      {store.status}
+                    </span>
                   </div>
-                  <div className={`flex items-center text-[11px] transition-colors ${
-                    activeStore.id === store.id ? 'text-white/80' : 'text-gray-600'
-                  }`}>
-                    <Phone size={14} className={`mr-2 shrink-0 ${activeStore.id === store.id ? 'text-white' : 'text-[#006335]'}`} />
-                    <span>{store.phone}</span>
+                  
+                  <div className="space-y-2">
+                    <div className={`flex items-start text-[11px] leading-tight transition-colors ${
+                      activeStore.id === store.id ? 'text-white/80' : 'text-gray-600'
+                    }`}>
+                      <MapPin size={14} className={`mr-2 shrink-0 ${activeStore.id === store.id ? 'text-white' : 'text-[#006335]'}`} />
+                      <span>{store.address}</span>
+                    </div>
+                    <div className={`flex items-center text-[11px] transition-colors ${
+                      activeStore.id === store.id ? 'text-white/80' : 'text-gray-600'
+                    }`}>
+                      <Phone size={14} className={`mr-2 shrink-0 ${activeStore.id === store.id ? 'text-white' : 'text-[#006335]'}`} />
+                      <span>{store.phone}</span>
+                    </div>
                   </div>
-                </div>
 
-                {activeStore.id === store.id && (
-                  <div className="mt-4 pt-4 border-t border-white/10 flex justify-end">
-                    <button className="bg-white text-[#006335] p-1.5 rounded-full">
-                      <Navigation size={14} />
-                    </button>
-                  </div>
-                )}
+                  {activeStore.id === store.id && (
+                    <div className="mt-4 pt-4 border-t border-white/10 flex justify-end">
+                      <button className="bg-white text-[#006335] p-1.5 rounded-full">
+                        <Navigation size={14} />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ))
+            ) : (
+              <div className="bg-white p-10 rounded-2xl text-center">
+                <p className="text-gray-400 text-sm">검색 결과가 없습니다.</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
