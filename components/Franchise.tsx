@@ -22,7 +22,7 @@ const Franchise: React.FC = () => {
   ];
 
   const costs = [
-    { category: '가맹금', item: '가입비', price: '1,000', note: '영업표시 사용(규모에 따라 다름 500~1000)' },
+    { category: '가맹금', item: '가입비', price: '500', note: '영업표시 사용(규모에 따라 다름 500~1000)' },
     { category: '', item: '교육비', price: '0', note: '사전 교육 및 오픈 현장 교육' },
     { category: '인테리어', item: '기본공사', price: '7,500', note: '철거,목/금속 공사, 전기, 도장, 타일, 급 배수 설비, 공조(급/배기)' },
     { category: '기타1', item: '추가공사', price: '2,500', note: '도시가스, 간판, 의/탁자, 냉난방, 전기증설 등' },
@@ -89,7 +89,7 @@ const Franchise: React.FC = () => {
                   ))}
                   <tr className="bg-[#006335]/5">
                     <td colSpan={2} className="px-5 py-5 font-bold text-gray-900 text-sm">개설비용 합계</td>
-                    <td className="px-5 py-5 text-right font-black text-[#006335] text-lg">14,500</td>
+                    <td className="px-5 py-5 text-right font-black text-[#006335] text-lg">14,000</td>
                     <td className="px-5 py-5 text-[10px] text-[#006335] font-medium italic">※실13평 기준(직영/가맹 운영 추정치)</td>
                   </tr>
                 </tbody>

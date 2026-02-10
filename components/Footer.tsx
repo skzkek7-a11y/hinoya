@@ -79,8 +79,8 @@ const Footer: React.FC = () => {
 
         <div className="mt-12 text-[11px] text-gray-700 leading-relaxed text-center lg:text-left border-t border-white/5 pt-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <p>상호명: (주)히노야코리아 | 대표자: 홍길동 | 사업자등록번호: 000-00-00000 | 주소: 서울특별시 강남구 도산대로 456</p>
-            <p className="lg:text-right">고객센터: 1588-XXXX | 이메일: support@hinoya.co.kr | 제휴문의: partner@hinoya.co.kr</p>
+            <p>상호명: (주)동화에프엔비 | 대표자: 박희대, 이승현 | 사업자등록번호: 338-81-03954 | 주소: 서울특별시 강남구 강남대로 94길 75</p>
+            <p className="lg:text-right">고객센터 및 제휴문의: hinoyakorea@gmail.com</p>
           </div>
         </div>
       </div>

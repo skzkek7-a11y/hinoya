@@ -16,9 +16,9 @@ const menuItems = [
   },
   {
     id: 3,
-    name: '비엔나 카레',
-    description: '고함량 국내산 돼지고기로 만들어 차원이 다른 쫀득함',
-    image: 'https://i.postimg.cc/htP2h95q/menu03.jpg?auto=format&fit=crop&q=80&w=600'
+    name: '새우튀김 카레',
+    description: '통통한 대하살을 담백한 빵가루로 튀겨내 카레와 최고의 어울림',
+    image: 'https://i.postimg.cc/wjZgFnnT/menu04.jpg'
   }
 ];
 
