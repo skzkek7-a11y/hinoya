@@ -3,8 +3,8 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative h-[80vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay - Updated to match the user's provided shrimp & vegetable curry visual */}
+    <section id="hero" className="relative h-[85vh] md:h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0"
         style={{
@@ -16,8 +16,8 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+      {/* Content Area - Added top padding to create space from the fixed header */}
+      <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto pt-24 md:pt-32">
         <div className="inline-block mb-6 md:mb-8 animate-fade-in">
           <p className="text-[#006335] bg-white inline-block px-4 py-1.5 rounded-full text-[10px] md:text-xs font-black tracking-[0.2em] shadow-xl">
             KANDA CURRY GRAND PRIX WINNER
