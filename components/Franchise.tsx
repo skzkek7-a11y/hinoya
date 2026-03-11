@@ -110,8 +110,10 @@ const Franchise: React.FC = () => {
           <div className="mt-8 p-6 bg-gray-50 rounded-xl border border-dashed border-gray-200">
             <div className="flex items-start space-x-3 text-gray-500 text-[11px] leading-relaxed break-keep">
               <Info size={14} className="mt-0.5 shrink-0" />
-              <p>별도고사내역 : 철거, 외부공사(샤시 프레임, 도어/자동문, 유리 등), 냉난방공사, 전면간판 외 추가간판, 화장실공사, 전기증설, 소방공사 등</p>
-              <p>제시된 금액은 당사의 직영점 공사 경험으로 추정한 금액으로, 실제 공사환경 및 여건에 따라 금액이 변동될 수 있습니다.</p>
+              <div>
+                <p>별도고사내역 : 철거, 외부공사(샤시 프레임, 도어/자동문, 유리 등), 냉난방공사, 전면간판 외 추가간판, 화장실공사, 전기증설, 소방공사 등</p>
+                <p>제시된 금액은 당사의 직영점 공사 경험으로 추정한 금액으로, 실제 공사환경 및 여건에 따라 금액이 변동될 수 있습니다.</p>
+              </div>
             </div>
           </div>
 
