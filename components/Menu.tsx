@@ -53,7 +53,7 @@ const menuItems = [
   {
     id: 9,
     name: '비엔나 카레',
-    description: '국내산 한돈 100%, 쫀득하고 탄력있는 최고의 소세지',
+    description: '국내산 한돈 100%, 쫀득하고 탄력있는 최고의 소시지',
     image: 'https://i.postimg.cc/zBtcXY7w/menu303.jpg'
   }
 ];
