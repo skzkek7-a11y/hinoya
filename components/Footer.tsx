@@ -1,8 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Instagram, Facebook, Youtube, Globe } from 'lucide-react';
+import PrivacyModal from './PrivacyModal';
 
 const Footer: React.FC = () => {
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+
   return (
     <footer className="bg-gray-950 text-gray-500 pt-24 pb-12">
       <div className="container mx-auto px-4">
@@ -67,8 +70,12 @@ const Footer: React.FC = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center text-[11px] uppercase tracking-[0.2em] gap-8">
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-8 gap-y-4">
             <span className="opacity-40">© 2024 HINOYA KOREA. ALL RIGHTS RESERVED.</span>
-            <a href="#" className="hover:text-white transition-colors font-medium">Terms of Use</a>
-            <a href="#" className="hover:text-white transition-colors font-bold text-[#006335]">Privacy Policy</a>
+            <button 
+              onClick={() => setIsPrivacyOpen(true)}
+              className="hover:text-white transition-colors font-bold text-[#006335] uppercase tracking-[0.2em]"
+            >
+              개인정보처리방침
+            </button>
           </div>
           <div className="flex items-center space-x-8">
             <a href="https://www.instagram.com/hinoya_korea?igsh=MTVjZ3F0bDdjdnJvNw==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:-translate-y-1"><Instagram size={20} /></a>
@@ -84,6 +91,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <PrivacyModal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
     </footer>
   );
 };
