@@ -19,6 +19,42 @@ const menuItems = [
     name: '새우튀김 카레',
     description: '통통한 대하살을 담백한 빵가루로 튀겨내 카레와 최고의 어울림',
     image: 'https://i.postimg.cc/wjZgFnnT/menu04.jpg'
+  },
+  {
+    id: 4,
+    name: '(한우)규스지 카레',
+    description: '한우의 스지를 비법양념으로 조리한 히노야만의 메뉴',
+    image: 'https://i.postimg.cc/0QWB21ns/menu201.jpg'
+  },
+  {
+    id: 5,
+    name: '믹스야채 카레',
+    description: '야채 매니아들의 기호를 충족하는 다양한 야채로 구성',
+    image: 'https://i.postimg.cc/DZyNTwrv/menu202.jpg'
+  },
+  {
+    id: 6,
+    name: '시금치 카레',
+    description: '건강과 맛을 한번에 잡은 시금치와 카레의 조화',
+    image: 'https://i.postimg.cc/wvTrpjXB/menu203.jpg'
+  },
+  {
+    id: 7,
+    name: '치킨카츠 카레',
+    description: '국내산 닭고기로 만든 영양 만점 메뉴',
+    image: 'https://i.postimg.cc/635PXpr6/menu301.jpg'
+  },
+  {
+    id: 8,
+    name: '가지튀김 카레',
+    description: '생가지를 바삭하게 튀겨낸 히노야의 프리미엄 메뉴',
+    image: 'https://i.postimg.cc/Y0vyvDD4/menu302.jpg'
+  },
+  {
+    id: 9,
+    name: '비엔나 카레',
+    description: '국내산 한돈 100%, 쫀득하고 탄력있는 최고의 소세지',
+    image: 'https://i.postimg.cc/zBtcXY7w/menu303.jpg'
   }
 ];
 
@@ -40,25 +76,17 @@ const Menu: React.FC = () => {
                   src={item.image} 
                   alt={item.name} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-6 md:p-8">
                 <h4 className="text-lg md:text-xl font-bold mb-2 group-hover:text-[#006335] transition-colors">{item.name}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2 md:line-clamp-none">
+                <p className="text-gray-600 text-sm leading-relaxed line-clamp-2 md:line-clamp-none">
                   {item.description}
                 </p>
-                <button className="text-[#006335] font-bold text-xs flex items-center group-hover:underline">
-                  자세히 보기 <span className="ml-1">→</span>
-                </button>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <button className="w-full md:w-auto border-2 border-[#006335] text-[#006335] px-10 py-3.5 rounded-full font-bold hover:bg-[#006335] hover:text-white transition-all text-sm">
-            전체 메뉴 보기
-          </button>
         </div>
       </div>
     </section>
