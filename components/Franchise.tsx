@@ -24,9 +24,9 @@ const Franchise: React.FC = () => {
   const costs = [
     { category: '가맹금', item: '가입비', price: '500', note: '영업표시 사용(규모에 따라 다름 500~1000)', note2: '-' },
     { category: '', item: '교육비', price: '0', note: '사전 교육 및 오픈 현장 교육', note2: '-' },
-    { category: '인테리어', item: '기본공사', price: '6,000', note: '철거,목/금속 공사, 전기, 도장, 타일, 급 배수 설비, 공조(급/배기)', note2: '점주 직접공사 (감리-협의)' },
-    { category: '기타1', item: '추가공사', price: '900', note: '도시가스, 간판, 의/탁자, 냉난방, 전기증설 등', note2: '' },
-    { category: '기타2', item: '주방집기/기물 등', price: '3,500', note: '가스기구, 식기 및 도구, POS장비 일체 포함', note2: '-' },
+    { category: '인테리어', item: '기본공사', price: '6,000', note: '벽체, 천장, 바닥, 전기, 설비, 공조', note2: '점주 직접공사 (감리-협의)' },
+    { category: '기타1', item: '추가공사', price: '900', note: '가스공사, 간판 및 사인류, 어닝', note2: '' },
+    { category: '기타2', item: '주방집기/기물 등', price: '3,500', note: '주방설비, 주방도구, 식기, 가구, POS 및 KIOSK 일체', note2: '-' },
  ];
 
   return (
@@ -110,7 +110,8 @@ const Franchise: React.FC = () => {
           <div className="mt-8 p-6 bg-gray-50 rounded-xl border border-dashed border-gray-200">
             <div className="flex items-start space-x-3 text-gray-500 text-[11px] leading-relaxed break-keep">
               <Info size={14} className="mt-0.5 shrink-0" />
-              <p>본 금액은 점포 구조 및 공사 기간, 물가 변동에 따라 변경될 수 있으며 외부/소방/공과금 등 추가 공사비는 제외된 금액입니다.</p>
+              <p>별도고사내역 : 철거, 외부공사(샤시 프레임, 도어/자동문, 유리 등), 냉난방공사, 전면간판 외 추가간판, 화장실공사, 전기증설, 소방공사 등</p>
+              <p>제시된 금액은 당사의 직영점 공사 경험으로 추정한 금액으로, 실제 공사환경 및 여건에 따라 금액이 변동될 수 있습니다.</p>
             </div>
           </div>
 
