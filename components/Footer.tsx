@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
             <a href="#" className="hover:text-white transition-colors font-bold text-[#006335]">Privacy Policy</a>
           </div>
           <div className="flex items-center space-x-8">
-            <a href="#" className="text-gray-400 hover:text-white transition-all transform hover:-translate-y-1"><Instagram size={20} /></a>
+            <a href="https://www.instagram.com/hinoya_korea?igsh=MTVjZ3F0bDdjdnJvNw==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all transform hover:-translate-y-1"><Instagram size={20} /></a>
             <a href="#" className="text-gray-400 hover:text-white transition-all transform hover:-translate-y-1"><Facebook size={20} /></a>
             <a href="#" className="text-gray-400 hover:text-white transition-all transform hover:-translate-y-1"><Youtube size={20} /></a>
           </div>

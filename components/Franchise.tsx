@@ -22,11 +22,11 @@ const Franchise: React.FC = () => {
   ];
 
   const costs = [
-    { category: '가맹금', item: '가입비', price: '500', note: '영업표시 사용(규모에 따라 다름 500~1000)' },
-    { category: '', item: '교육비', price: '0', note: '사전 교육 및 오픈 현장 교육' },
-    { category: '인테리어', item: '기본공사', price: '7,500', note: '철거,목/금속 공사, 전기, 도장, 타일, 급 배수 설비, 공조(급/배기)' },
-    { category: '기타1', item: '추가공사', price: '2,500', note: '도시가스, 간판, 의/탁자, 냉난방, 전기증설 등' },
-    { category: '기타2', item: '주방집기/기물 등', price: '3,500', note: '가스기구, 식기 및 도구, POS장비 일체 포함' },
+    { category: '가맹금', item: '가입비', price: '500', note: '영업표시 사용(규모에 따라 다름 500~1000)', note2: '-' },
+    { category: '', item: '교육비', price: '0', note: '사전 교육 및 오픈 현장 교육', note2: '-' },
+    { category: '인테리어', item: '기본공사', price: '6,000', note: '철거,목/금속 공사, 전기, 도장, 타일, 급 배수 설비, 공조(급/배기)', note2: '점주 직접공사 (감리-협의)' },
+    { category: '기타1', item: '추가공사', price: '900', note: '도시가스, 간판, 의/탁자, 냉난방, 전기증설 등', note2: '' },
+    { category: '기타2', item: '주방집기/기물 등', price: '3,500', note: '가스기구, 식기 및 도구, POS장비 일체 포함', note2: '-' },
  ];
 
   return (
@@ -76,6 +76,7 @@ const Franchise: React.FC = () => {
                     <th className="px-5 py-4 font-bold text-gray-900 text-xs">항목</th>
                     <th className="px-5 py-4 font-bold text-gray-900 text-xs text-right">투자비</th>
                     <th className="px-5 py-4 font-bold text-gray-900 text-xs">비고</th>
+                    <th className="px-5 py-4 font-bold text-gray-900 text-xs">비고2</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-50">
@@ -85,12 +86,21 @@ const Franchise: React.FC = () => {
                       <td className="px-5 py-4 text-xs text-gray-900 font-medium">{cost.item}</td>
                       <td className="px-5 py-4 text-xs text-right font-bold text-gray-900">{cost.price}</td>
                       <td className="px-5 py-4 text-[11px] text-gray-400 italic">{cost.note}</td>
+                      {idx === 2 ? (
+                        <td rowSpan={2} className="px-5 py-4 text-[11px] text-gray-400 italic border-l border-gray-50 align-middle text-center bg-gray-50/30">
+                          {cost.note2}
+                        </td>
+                      ) : idx === 3 ? null : (
+                        <td className="px-5 py-4 text-[11px] text-gray-400 italic">
+                          {cost.note2}
+                        </td>
+                      )}
                     </tr>
                   ))}
                   <tr className="bg-[#006335]/5">
                     <td colSpan={2} className="px-5 py-5 font-bold text-gray-900 text-sm">개설비용 합계</td>
-                    <td className="px-5 py-5 text-right font-black text-[#006335] text-lg">14,000</td>
-                    <td className="px-5 py-5 text-[10px] text-[#006335] font-medium italic">※실13평 기준(직영/가맹 운영 추정치)</td>
+                    <td className="px-5 py-5 text-right font-black text-[#006335] text-lg">10,900</td>
+                    <td colSpan={2} className="px-5 py-5 text-[10px] text-[#006335] font-medium italic">※실13평 기준(직영/가맹 운영 추정치)</td>
                   </tr>
                 </tbody>
               </table>

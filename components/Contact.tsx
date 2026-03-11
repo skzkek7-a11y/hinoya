@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
             <div className="mt-10 pt-8 border-t border-white/10 hidden md:block">
               <p className="text-xs font-bold opacity-40 mb-4 uppercase tracking-widest">Social channels</p>
               <div className="flex space-x-6 text-sm font-bold">
-                <a href="#" className="hover:text-white opacity-60 hover:opacity-100 transition-all">Instagram</a>
+                <a href="https://www.instagram.com/hinoya_korea?igsh=MTVjZ3F0bDdjdnJvNw==" target="_blank" rel="noopener noreferrer" className="hover:text-white opacity-60 hover:opacity-100 transition-all">Instagram</a>
                 <a href="#" className="hover:text-white opacity-60 hover:opacity-100 transition-all">YouTube</a>
               </div>
             </div>
