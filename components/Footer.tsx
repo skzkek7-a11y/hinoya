@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-12 md:gap-24">
+          <div className="grid grid-cols-2 gap-12 md:gap-24">
             <div>
               <h5 className="text-white font-bold mb-8 text-lg">HINOYA</h5>
               <ul className="space-y-4 text-sm">
@@ -46,6 +46,7 @@ const Footer: React.FC = () => {
                 <li><a href="#brand-story" className="hover:text-white transition-colors">브랜드 스토리</a></li>
               </ul>
             </div>
+            {/*
             <div>
               <h5 className="text-white font-bold mb-8 text-lg">FRANCHISE</h5>
               <ul className="space-y-4 text-sm">
@@ -54,11 +55,12 @@ const Footer: React.FC = () => {
                 <li><a href="#contact" className="hover:text-white transition-colors">창업 문의</a></li>
               </ul>
             </div>
+            */}
             <div>
               <h5 className="text-white font-bold mb-8 text-lg">SUPPORT</h5>
               <ul className="space-y-4 text-sm">
                 <li><a href="#store-locator" className="hover:text-white transition-colors">매장 찾기</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">공지사항</a></li>
+                {/* <li><a href="#contact" className="hover:text-white transition-colors">공지사항</a></li> */}
                 <li><a href="https://hinoya.jp/" target="_blank" className="hover:text-white transition-colors flex items-center">
                   JAPAN <Globe size={14} className="ml-2" />
                 </a></li>

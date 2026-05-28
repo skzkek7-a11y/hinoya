@@ -27,9 +27,9 @@ const App: React.FC = () => {
         <Hero />
         <Menu />
         <BrandStory />
-        <Franchise />
+        {/* <Franchise /> */}
         <StoreLocator />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
     </div>

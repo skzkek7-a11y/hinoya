@@ -13,9 +13,9 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     { name: '히노야카레', href: '#hero' },
     { name: '히노야 메뉴', href: '#menu' },
     { name: '회사소개', href: '#brand-story' },
-    { name: '프랜차이즈', href: '#franchise' },
+    // { name: '프랜차이즈', href: '#franchise' },
     { name: '매장안내', href: '#store-locator' },
-    { name: '문의', href: '#contact' },
+    // { name: '문의', href: '#contact' },
   ];
 
   const closeMenu = () => setIsMobileMenuOpen(false);

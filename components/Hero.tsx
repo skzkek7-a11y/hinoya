@@ -42,12 +42,14 @@ const Hero: React.FC = () => {
             <span className="relative z-10">대표 메뉴 보기</span>
             <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-all">→</span>
           </a>
+          {/* 
           <a 
             href="#franchise" 
             className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-[#006335] transition-all active:scale-95 w-full md:w-auto text-sm shadow-xl"
           >
             가맹 상담하기
           </a>
+          */}
         </div>
       </div>
 
